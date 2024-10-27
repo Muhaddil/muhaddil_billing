@@ -4,6 +4,10 @@
 
 **Muhaddil Billing Script** is a FiveM script that allows players to send and manage invoices within the game. It supports different frameworks, currently ESX, with plans to support QBCore in the future. Players can create preset invoices for various jobs (mechanics, police, ambulance) and pay these invoices through a user-friendly interface.
 
+<div align="center">
+    <img src="https://i.ibb.co/RY0w9ws/imagen.png" alt="Muhaddil Billing Script Screenshot" width="300"/>
+</div>
+
 ## Features
 
 - Send invoices to nearby players.
@@ -11,6 +15,7 @@
 - Ability to save and reuse invoice presets.
 - Manage and pay invoices from a dedicated menu.
 - Configurable key mappings for easy access.
+- 0.00 resmon 1 values on idle
 
 ## Requirements
 

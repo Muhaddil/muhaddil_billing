@@ -1,5 +1,5 @@
 Config = {}
-Config.Locale = GetConvar('esx:locale', 'es')
+Config.Locale = GetConvar('esx:locale', 'en')
 Config.FrameWork = 'esx' -- Only supporting ESX, DO NOT CHANGE THIS
 
 Config.MenuPosition = 'right' -- Options: 'left', 'right', 'top', 'bottom'
