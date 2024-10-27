@@ -1,5 +1,5 @@
 local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
-local resourceName = 'muhaddil_billing'
+local resourceName = 'Muhaddil/muhaddil_billing'
 local githubApiUrl = 'https://api.github.com/repos/' .. resourceName .. '/releases/latest'
 
 -- Función para calcular la diferencia en días
@@ -95,7 +95,7 @@ if Config.AutoVersionChecker then
 
                 if latestVersion ~= currentVersion then
                     print('╭────────────────────────────────────────────────────╮')
-                    printCentered('[muhaddil_billing] - New Version Available', boxWidth, '34') -- Blue
+                    printWrapped('[muhaddil_billing] - New Version Available', boxWidth, '34') -- Blue
                     printWrapped('Current version: ' .. currentVersion, boxWidth, '32')         -- Green
                     printWrapped('Latest version: ' .. latestVersion, boxWidth, '33')           -- Yellow
                     printWrapped('Released: ' .. formattedDate, boxWidth, '33')                 -- Yellow
