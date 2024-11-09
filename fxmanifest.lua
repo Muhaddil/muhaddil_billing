@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'Muhaddil'
 description 'FiveM script that allows players to send and manage invoices within the game'
-version 'v1.0.2'
+version 'v1.0.3'
 
 client_script 'client.lua'
 ui_page 'html/ui.html'

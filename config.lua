@@ -1,6 +1,9 @@
 Config = {}
 Config.Locale = GetConvar('esx:locale', 'en')
 Config.FrameWork = 'esx' -- Only supporting ESX, DO NOT CHANGE THIS
+Config.EnableCommands = true -- Enables or disables the use of commands to open the invoice menu
+Config.Command = 'openinvoice' -- Sets the command name for opening the invoice menu (e.g., "/openinvoice")
+Config.AllowAllJobs = true -- Allows all jobs to access the invoice menu with a default empty preset if no specific preset is configured
 
 Config.MenuPosition = 'right' -- Options: 'left', 'right', 'top', 'bottom'
 

@@ -96,11 +96,11 @@ if Config.AutoVersionChecker then
                 if latestVersion ~= currentVersion then
                     print('╭────────────────────────────────────────────────────╮')
                     printWrapped('[muhaddil_billing] - New Version Available', boxWidth, '34') -- Blue
-                    printWrapped('Current version: ' .. currentVersion, boxWidth, '32')         -- Green
-                    printWrapped('Latest version: ' .. latestVersion, boxWidth, '33')           -- Yellow
-                    printWrapped('Released: ' .. formattedDate, boxWidth, '33')                 -- Yellow
-                    printWrapped('Notes: ' .. shortenedNotes, boxWidth, '33')                   -- Yellow
-                    printWrapped('Download: ' .. shortenedUrl, boxWidth, '32')                  -- Green
+                    printWrapped('Current version: ' .. currentVersion, boxWidth, '32')        -- Green
+                    printWrapped('Latest version: ' .. latestVersion, boxWidth, '33')          -- Yellow
+                    printWrapped('Released: ' .. formattedDate, boxWidth, '33')                -- Yellow
+                    printWrapped('Notes: ' .. shortenedNotes, boxWidth, '33')                  -- Yellow
+                    printWrapped('Download: ' .. shortenedUrl, boxWidth, '32')                 -- Green
                     print('╰────────────────────────────────────────────────────╯')
                 else
                     print('╭────────────────────────────────────────────────────╮')

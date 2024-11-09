@@ -1,7 +1,7 @@
 if Config.FrameWork == "esx" then
     ESX = exports['es_extended']:getSharedObject()
--- elseif Config.FrameWork == "qb" then
---     QBCore = exports['qb-core']:GetCoreObject()
+    -- elseif Config.FrameWork == "qb" then
+    --     QBCore = exports['qb-core']:GetCoreObject()
 else
     ESX = exports['es_extended']:getSharedObject()
 end
@@ -12,7 +12,7 @@ function OpenInvoiceMenu()
     if not isInvoiceOpen then
         local playerJob = ESX.GetPlayerData().job.name
         local playersNearby = GetNearbyPlayers()
-        local presets = Config.Presets[playerJob]
+        local presets = Config.Presets[playerJob] or (Config.AllowAllJobs and { { label = "", amount = 0 } } or nil)
         local position = Config.MenuPosition
 
         if presets == nil or #presets == 0 then
@@ -71,11 +71,13 @@ RegisterNUICallback('close', function(data, cb)
     cb('ok')
 end)
 
-RegisterKeyMapping('openinvoice', _U('command_title_open'), 'keyboard', 'F6')
+if Config.EnableCommands then
+    RegisterKeyMapping('openinvoice', _U('command_title_open'), 'keyboard', 'F6')
 
-RegisterCommand('openinvoice', function()
-    TriggerEvent('muhaddil_billing:openInvoiceMenu')
-end, false)
+    RegisterCommand(Config.Command, function()
+        TriggerEvent('muhaddil_billing:openInvoiceMenu')
+    end, false)
+end
 
 function GetNearbyPlayers()
     local coords = GetEntityCoords(PlayerPedId())
